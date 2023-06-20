@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "nome": "Foguete - Missão Espacial LS-23",
+        "valor": 89.91,
+        "imagem": "../brinquedos/foguete.jpg"
+    },
+    {
+        "id": 2,
+        "nome": "Cápsula - Missão Espacial LS-23",
+        "valor": 112.84,
+        "imagem": "../brinquedos/capsula.jpg"
+    },
+    {
+        "id": 3,
+        "nome": "Veículo - Missão Espacial LS-23",
+        "valor": 74.75,
+        "imagem": "../brinquedos/veiculo.jpg"
+    },
+    {
+        "id": 4,
+        "nome": "Pistola - Missão Espacial LS-23",
+        "valor": 45.39,
+        "imagem": "../brinquedos/pistola.jpg"
+    },
+    {
+        "id": 5,
+        "nome": "Astronauta - Missão Espacial LS-23",
+        "valor": 67,
+        "imagem": "../brinquedos/astronauta.jpg"
+    },
+    {
+        "id": 6,
+        "nome": "Satélite - Missão Espacial LS-23",
+        "valor": 95,
+        "imagem": "../brinquedos/satelite.jpg"
+    },
+    {
+        "id": 7,
+        "nome": "Veículo para exploração - Missão Espacial LS-23",
+        "valor": 150.56,
+        "imagem": "../brinquedos/veiculoexplorador.jpg"
+    },
+    {
+        "id": 8,
+        "nome": "Estação espacial - Missão Espacial LS-23",
+        "valor": 249.20,
+        "imagem": "../brinquedos/estacaoespacial.jpg"
+    }
+]
