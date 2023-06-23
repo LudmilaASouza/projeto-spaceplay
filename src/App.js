@@ -11,7 +11,7 @@ export default function App() {
     <AppContainer>
       <Filter> </Filter>
       <Home cart={cart} setCart={setCart}> </Home>
-      <Cart> </Cart>
+      <Cart cart={cart} setCart={setCart}> </Cart>
     </AppContainer>
   )
 }
