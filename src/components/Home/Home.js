@@ -1,7 +1,7 @@
 import brinquedos from "../../brinquedos.json"
 import { BrinquedosContainer, Imagens } from "./style";
 
-const Home = ({ cart, setCart }) => {
+const Home = ({ cart, setCart, ordination, valueMax, valueMin, searchName}) => {
     const addBrinquedoCart = (brinquedo) => {
         const brinquedoFindCart = cart.find(
             (item) => item.nome === brinquedo.nome
@@ -20,7 +20,17 @@ const Home = ({ cart, setCart }) => {
     console.log(cart, "cart")
 return (
     <div>
-        {brinquedos.map((brinquedo) => {
+        <p>Produtos</p>
+        {brinquedos.sort((brinquedo1,brinquedo2) => {
+            return ordination === "growing" ? brinquedo1.nome.localeCompare(brinquedo2.nome) :
+            brinquedo2.nome.localeCompare(brinquedo1.nome)
+        }).filter((brinquedo) => {
+            return valueMin ? brinquedo.valor >= valueMin : brinquedo;
+        }).filter((brinquedo) => {
+            return valueMax ? brinquedo.valor <= valueMax : brinquedo;
+        }).filter((brinquedo) => {
+            return brinquedo.nome.toLowerCase().includes(searchName.toLowerCase());
+        }).map((brinquedo) => {
         return (
         <BrinquedosContainer key={brinquedo.id}>
             <Imagens src={brinquedo.imagem} alt={brinquedo.nome} />

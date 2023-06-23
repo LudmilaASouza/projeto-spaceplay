@@ -29,7 +29,8 @@ export default function App() {
       <Filter ordination={ordination} setOrdination={setOrdination}
       setValueMax={setValueMax} setValueMin={setValueMin}
       setSearchName={setSearchName}> </Filter>
-      <Home cart={cart} setCart={setCart}> </Home>
+      <Home cart={cart} setCart={setCart} ordination={ordination}
+      valueMax={valueMax} valueMin={valueMin} searchName={searchName}> </Home>
       <Cart cart={cart} setCart={setCart}> </Cart>
     </AppContainer>
   )
