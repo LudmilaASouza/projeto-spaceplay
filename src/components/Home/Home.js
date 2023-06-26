@@ -1,5 +1,5 @@
 import brinquedos from "../../brinquedos.json"
-import { BrinquedosContainer, Imagens } from "./style";
+import { BrinquedosContainer, Imagens, ProdutosContainer } from "./style";
 
 const Home = ({ cart, setCart, ordination, valueMax, valueMin, searchName}) => {
     const addBrinquedoCart = (brinquedo) => {
@@ -19,8 +19,7 @@ const Home = ({ cart, setCart, ordination, valueMax, valueMin, searchName}) => {
 
     console.log(cart, "cart")
 return (
-    <div>
-        <p>Produtos</p>
+    <ProdutosContainer>
         {brinquedos.sort((brinquedo1,brinquedo2) => {
             return ordination === "growing" ? brinquedo1.nome.localeCompare(brinquedo2.nome) :
             brinquedo2.nome.localeCompare(brinquedo1.nome)
@@ -40,7 +39,7 @@ return (
         </BrinquedosContainer>
         );
     })}
-    </div>
+    </ProdutosContainer>
 );
 };
 
