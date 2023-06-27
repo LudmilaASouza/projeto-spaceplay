@@ -1,7 +1,7 @@
 import Filter from "./components/Filter/Filter"
 import Home from "./components/Home/Home"
 import Cart from "./components/Cart/Cart"
-import { AppContainer } from "./style"
+import { AppContainer, Container } from "./style"
 import { useEffect, useState } from "react"
 
 export default function App() {
@@ -29,9 +29,12 @@ export default function App() {
       <Filter ordination={ordination} setOrdination={setOrdination}
       setValueMax={setValueMax} setValueMin={setValueMin}
       setSearchName={setSearchName}> </Filter>
-      <Home cart={cart} setCart={setCart} ordination={ordination}
-      valueMax={valueMax} valueMin={valueMin} searchName={searchName}> </Home>
-      <Cart cart={cart} setCart={setCart}> </Cart>
+      <h1>Coleção de brinquedos - Missão Espacial ZX-22</h1>
+      <Container>        
+        <Home cart={cart} setCart={setCart} ordination={ordination}
+        valueMax={valueMax} valueMin={valueMin} searchName={searchName}> </Home>
+        <Cart cart={cart} setCart={setCart}> </Cart>
+      </Container>
     </AppContainer>
   )
 }

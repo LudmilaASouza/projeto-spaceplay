@@ -19,6 +19,7 @@ const Home = ({ cart, setCart, ordination, valueMax, valueMin, searchName}) => {
 
     console.log(cart, "cart")
 return (
+    
     <ProdutosContainer>
         {brinquedos.sort((brinquedo1,brinquedo2) => {
             return ordination === "growing" ? brinquedo1.nome.localeCompare(brinquedo2.nome) :
@@ -33,8 +34,8 @@ return (
         return (
         <BrinquedosContainer key={brinquedo.id}>
             <Imagens src={brinquedo.imagem} alt={brinquedo.nome} />
-            <p> Nome: {brinquedo.nome} </p>
-            <p> Preço: R${brinquedo.valor} </p>
+            <p>{brinquedo.nome} </p>
+            <p> R${brinquedo.valor} </p>
             <button onClick={() => addBrinquedoCart(brinquedo)}> Comprar </button>
         </BrinquedosContainer>
         );

@@ -1,7 +1,7 @@
 import { Button, FilterContainer, InputContainer } from "./style";
 
 const Filter = ({ordination, setOrdination, setValueMax, setValueMin, setSearchName}) => {
-    const FilterCleaner = () => {
+    const filterCleaner = () => {
         setSearchName("")
         setValueMax(Infinity)
         setValueMin(-Infinity)
@@ -23,7 +23,7 @@ const Filter = ({ordination, setOrdination, setValueMax, setValueMin, setSearchN
                 <input placeholder="Buscar por nome" type="text" onChange={(e) => setSearchName (e.target.value)}/>
             </InputContainer>
 
-            <Button onClick={FilterCleaner}>Voltar</Button>
+            <Button onClick={filterCleaner}>Voltar</Button>
         </FilterContainer>
     );
 }

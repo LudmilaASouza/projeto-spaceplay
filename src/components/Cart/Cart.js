@@ -1,3 +1,5 @@
+import { CartContainer } from "./style";
+
 const Cart = ({cart, setCart}) => {
     
     const removeCart = (brinquedo) => {
@@ -13,19 +15,19 @@ const Cart = ({cart, setCart}) => {
     }, 0)
 
     return (
-        <div>
-            <p>Carrinho</p>
+        <CartContainer>
+            <p>Carrinho:</p>
             {cart.map((item) => {
                 return (
                     <div key={item.id}>
-                    <p>Nome: {item.nome}</p>
+                    <p>{item.nome}</p>
                     <p>Quantidade: {item.quantidade}</p>
                     <button onClick={() => removeCart(item)}>Remover</button>
                     </div>
                 )
             })}
-            <p>Total: {total}</p>
-        </div>
+            <p>Valor total: R${total}</p>
+        </CartContainer>
     );
 }
 
